@@ -1,0 +1,40 @@
+//rotation des fleurs
+@keyframes rotation{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+}
+
+//effet flotement (titre et tête de chat)
+@keyframes float{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(-20px, -10px) rotate(5deg);
+    }
+    40% {
+        transform: translate(15px, -20px) rotate(-5deg);
+    }
+    60% {
+        transform: translate(15px, 20px) rotate(7deg);
+    }
+    80% {
+        transform: translate(-20px, 20px) rotate(-7deg);
+    }     
+}
+
+//Annimation des titres dit "Flow 4".
+@keyframes animationTitre{
+    0% { 
+        transform: translateY(100px);
+        opacity: 0;
+    }  
+    100% { 
+        transform: TranslateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,523 @@
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+// variable pour les durées d'animation.
+@import "variables/timing";
+
+// variable pour l'effet de rotation des fleurs
+:root{
+    --rotation: 10s;
+}
+
+// keyframes animation.
+
+@import "variables/keyframes";
+
+// scss template oscars. (remove if remove oscars template part)
+@import "template-parts/oscars"; 
+
+// scss Swiper.
+@import "template-parts/swiper";
+
+// container hero 
+.banner{
+    position : relative;
+    width: 100%;
+    height :100%;
+    max-width: 1440px;
+    max-height: 806px;
+    min-height: unset;
+    margin-bottom: 100px; 
+    .container-img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        max-width: 1440px;
+        height: 100%;
+        max-height: 806px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10%;
+    }
+    #background-video{
+        height: 100%;
+        width: 100%;
+    } 
+}
+
+//effet d'apparition des sections.
+.banner{
+    opacity: 0;
+    transform: translateY(-20vh);
+}
+
+.banner.active{
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+.container-img{
+    opacity: 0;
+    transform: translateY(40vh);
+}
+
+.container-img.active{
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+#story{
+    opacity: 0;
+    transform: translateY(20vh);
+}
+
+#story.active{
+    opacity: 1;
+    transform: translateY(0vh);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+#characters{
+    opacity:0; 
+    transform: translateX(20vw);  
+}
+
+#characters.active{
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+#place{
+    opacity:0;
+    transform: translateX(-20vh);
+}
+
+#place.active{
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+#studio{
+    opacity:0;
+    transform: TranslateY(20vh);
+}
+
+#studio.active{
+    opacity: 1;
+    transform: TranslateY(0vh);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+.oscars{
+    opacity:0;
+    transform: TranslateY(-20vh)
+}
+
+.oscars.active{
+    opacity: 1;
+    transform: TranslateY(0vh);
+    transition: all $anim-dur-section ease-in-out;
+}
+
+//animation float du logo et des chat dans le menu burger
+.float{
+    animation-name: float;
+    animation-duration: $anim-dur-float;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+//rotation des fleurs dans le menu burger
+.rotation{
+    animation-name: rotation;
+    animation-duration: var(--rotation);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+//animation des titres "flow 4"
+.animationTitre{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5em;
+    &__mot{
+        animation-name: animationTitre;
+        animation-duration: $animTitre-dur;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: $animTitre-delay * $i;
+            }  
+        }
+    }
+}
+
+.main-character h3{
+    display:flex;
+    justify-content: center;
+}
+
+#studio h2{
+    display:flex;
+    justify-content: center;
+}
+
+#nogap{
+    gap:0em;
+}
+
+// animation rotation des fleurs
+.story__article::after, 
+.story h2::after, 
+#studio h2::after, 
+#studio h2::before, 
+.site-footer::before, 
+.site-footer::after, 
+.site-footer 
+ul::after{
+    animation-name: rotation;
+    animation-duration: var(--rotation);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+//origine des fleurs
+.story__article::after{
+    transform-origin: 94px 94px;
+}
+
+.story h2::after{
+    transform-origin: 77px 77px;
+}
+
+#studio h2::after{
+    transform-origin: 54px 54px;
+}
+
+#studio h2::before{
+    transform-origin: 101px 100px;
+}
+
+.site-footer::before{
+    transform-origin: 77px 77px;
+}
+
+.site-footer::after{
+    transform-origin: 86px 84px;
+}
+
+.site-footer ul::after{
+    transform-origin: center;
+}
+
+//effet paralax des nuages
+.story #place{
+    background-image: url(../assets/img/Studio_Koukaki-image_place.png);
+    .big_cloud{
+        background-image: url(../assets/img/big_cloud.png);
+        height: 122px;
+        width: 316px;
+        position: relative;
+        margin: 0px;
+        filter:blur(8px);
+        top: 65px;
+        left: 50px;
+    }
+    .little_cloud{
+        background-image: url(../assets/img/little_cloud.png);
+        height: 55px;
+        width: 142px;
+        position: relative;
+        margin: 0px;
+        filter:blur(8px);
+        top: 248px;
+        left:-600px;
+    }
+}
+
+// logo en sticky sur la vidéo.
+.sticky{
+    position: sticky;
+    top: 20%;
+  }
+
+  // menu burger
+.menu-toggle{
+    display: unset;
+}
+
+.main-menu{
+	height: 0px;
+	width: 0px;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.main-menu.active{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100vh - 80px);
+	background-color: $color__background-body;
+    align-items: center;
+    font-size: 4rem;
+    line-height: normal;
+    gap: 50px;
+    overflow: hidden;
+	opacity: 1;
+	transition: opacity 1s ease;
+    :hover{
+        text-shadow: 0px 0px 14px $color__link-hover-menu; 
+        color: $color__link;
+    }
+    a {
+    	text-decoration: none;
+		z-index: 10;
+   	}
+    .koukaki_logo{
+        position: absolute;
+        bottom: 4%;
+    }
+    .cat_orange{
+    	position: absolute;
+        bottom: 10%;
+        left: 5%;
+        animation-delay: 1s;
+        }
+    .cat_blue{
+        position: absolute;
+        top: 23.5%;
+        left: 18%;
+       	animation-delay: 2s;
+        }
+    .cat_black{
+        position: absolute;
+        top:53%;
+        right:14%; 
+        animation-delay: 3s;
+    }
+    .flower-orchid{
+        position: absolute;
+        top:15%;
+        left:-5%;
+    }
+    .flower{
+        position: absolute;
+        bottom: 38%;
+        left:15%;
+        height: 70px;
+    }
+    .sunflower{
+        position: absolute;
+        top: 17%;
+        right: 13%;
+    }
+    .random_flower{
+        position: absolute;
+        top: 46%;
+        right: -2%;
+        height: 62px;
+    }
+    .hibiscus{
+    position: absolute;
+    bottom: -342px;
+    right: -308px;
+    }
+}
+
+//décalage des ancres
+section, article{
+    scroll-margin-top: 80px;
+}
+
+// gestion overflow    
+#studio{
+    overflow: hidden;
+}
+
+.site-header{
+    overflow: hidden;
+}
+
+//menu
+.main-navigation {
+	z-index: 1000;
+	background-color: $color__navigation_bg;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	button {
+		border: 0;
+		background-color: transparent;
+		width: 100px;
+		margin: 0px;
+		position: relative;
+		right: 0px;
+		display: unset!important;
+	}
+	.line {
+		height: 1px;
+		background-color: #000;
+		display: block;
+		margin: auto;
+		margin-block: 13px;
+		width: 40px;
+	}
+	ul {
+		height: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		display: none;
+		list-style: none;
+	}
+	.site-title {
+		display: unset;
+		position: absolute;
+		top: 25px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 700;
+		letter-spacing: -0.43px;
+			a:hover {
+				color: $color__link;
+		}
+	}
+    a{
+        text-align: center;
+    }
+}
+//gestion icone menu burger
+.burger{
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	margin-right: 130px;
+	position: relative;
+	span{
+		width: 100%;
+		height: 1px;
+		background-color: black;
+		display: block;
+		position: absolute;
+		top: 20px;
+		transition: background-color 1s ease-in-out;
+		&::before, &::after{
+			content: '';
+			position: absolute;
+			width:100%;
+			height: 1px;
+			background-color: black;
+			transition: transform 1s ease-in-out;
+		}
+		&::before{
+			transform: translateY(-10px);
+		}
+		&::after{
+			transform: translateY(10px);
+		}
+	}
+}
+
+.burger.active span{
+	background-color: transparent;
+	&::before{
+		transform: translateY(0px) rotateZ(405deg);
+	}
+	&::after{
+		transform: translateY(0px) rotateZ(-405deg);
+	}
+}	
+
+//responsive
+@media (max-width: $breakpoint__laptop) { 
+    .burger{
+        margin: 25px;
+    }
+}
+
+@media (max-width: $breakpoint__tablet) { 
+    .story #place .big_cloud{
+        left: 100px;
+    }
+    .story #place .little_cloud{
+        left: -300px;
+    }
+    .story #place > div {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: $breakpoint__small_tablet) { 
+    .site-footer::after{
+        display: none;
+    }
+    .oscars h3{
+        font-size: 1.5rem;
+        height: 200px;
+    }
+    .cat_orange{
+    	display: none;
+        }
+    .cat_blue{
+        display: none;
+        }
+    .cat_black{
+        display: none;
+    }
+    .flower-orchid{
+        display: none;
+    }
+    .flower{
+        display: none;
+    }
+    .sunflower{
+        display: none;
+    }
+    .random_flower{
+        display: none;
+    }
+    .hibiscus{
+        display: none;
+    }
+    .main-menu.active{
+        font-size: 3rem;
+    }
+    .float{
+        animation-name: unset;
+    }
+    .sticky{
+        top: unset;
+    }
+}
+
+@media (max-width: $breakpoint__large_phone) {
+    .main-menu.active{
+        font-size: 2rem;
+    }
+    .story #place .big_cloud{
+        display: none;
+    }
+    .story #place .little_cloud{
+        display: none;
+    }
+    .oscars h3{
+        height: 150px;
+    }
+    .oscars{
+        padding-bottom: 150px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
