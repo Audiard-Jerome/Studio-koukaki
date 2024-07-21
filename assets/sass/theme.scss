@@ -9,6 +9,11 @@
     --rotation: 10s;
 }
 
+// // débug
+// * {
+//     outline: 1px solid tomato;
+//   }
+
 // keyframes animation.
 
 @import "variables/keyframes";
@@ -73,6 +78,7 @@
 #story{
     opacity: 0;
     transform: translateY(20vh);
+    overflow: hidden;
 }
 
 #story.active{
@@ -222,9 +228,9 @@ ul::after{
 
 //effet paralax des nuages
 .story #place{
-    background-image: url(../assets/img/Studio_Koukaki-image_place.png);
+    background-image: url(../img/studio_koukaki-image_place.png);
     .big_cloud{
-        background-image: url(../assets/img/big_cloud.png);
+        background-image: url(../img/big_cloud.png);
         height: 122px;
         width: 316px;
         position: relative;
@@ -234,7 +240,7 @@ ul::after{
         left: 50px;
     }
     .little_cloud{
-        background-image: url(../assets/img/little_cloud.png);
+        background-image: url(../img/little_cloud.png);
         height: 55px;
         width: 142px;
         position: relative;

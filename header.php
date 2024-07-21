@@ -38,7 +38,7 @@
         <a class="animationTitre" href="#characters"><span>Personnages</span></a>
         <a class="animationTitre" href="#place"><span>Lieu</span></a>
         <a class="animationTitre" href="#studio-top"><span>Studio</span> <span>Koukaki</span></a>
-        <img class="koukaki_logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/Studio_Koukaki.svg'; ?>" alt="Studio Koukaki">
+        <img class="koukaki_logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/studio_koukaki.svg'; ?>" alt="Studio Koukaki">
         <img class="cat_orange float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_orange.png'; ?>" alt="chat orange">
         <img class="cat_blue float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_blue.png'; ?>" alt="chat bleu"> 
         <img class="cat_black float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_black.png'; ?>" alt="chat noir"> 
