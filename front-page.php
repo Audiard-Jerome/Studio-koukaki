@@ -9,7 +9,7 @@ get_header();
                 <source src="<?php echo get_stylesheet_directory_uri() . '/assets/mp4/video.mp4'; ?>" type="video/mp4" media="(min-width: 769px)">
             </video>
             <div class="container-img entrance">
-                <img class="sticky float" src="<?php echo get_template_directory_uri() . '/assets/img/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                <img class="sticky float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
         </section>
         <section id="story" class="story entrance">

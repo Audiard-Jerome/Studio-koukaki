@@ -33,7 +33,7 @@
             <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
         </div><!-- #site-navigation -->
         <nav id="menu" class="main-menu">
-        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/Image_logo_en_paralax.png'; ?>" alt="logo">
+        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/image_logo_en_paralax.png'; ?>" alt="logo">
         <a class="animationTitre" href="#story"><span>Histoire</span></a>
         <a class="animationTitre" href="#characters"><span>Personnages</span></a>
         <a class="animationTitre" href="#place"><span>Lieu</span></a>
@@ -42,10 +42,10 @@
         <img class="cat_orange float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_orange.png'; ?>" alt="chat orange">
         <img class="cat_blue float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_blue.png'; ?>" alt="chat bleu"> 
         <img class="cat_black float" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/cat_black.png'; ?>" alt="chat noir"> 
-        <img class="flower-orchid rotation" src="<?php echo get_template_directory_uri() . '/assets/img/orchid.png'; ?>" alt="Orchidée">
-        <img class="flower rotation" src="<?php echo get_template_directory_uri() . '/assets/img/flower.png'; ?>" alt="Fleur">
-        <img class="sunflower rotation" src="<?php echo get_template_directory_uri() . '/assets/img/sunflower.png'; ?>" alt="Tournesol">
-        <img class="random_flower rotation" src="<?php echo get_template_directory_uri() . '/assets/img/random_flower.png'; ?>" alt="Fleur diverse">
-        <img class="hibiscus rotation" src="<?php echo get_template_directory_uri() . '/assets/img/hibiscus_footer.png'; ?>" alt="hibiscus">
+        <img class="flower-orchid rotation" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/orchid.png'; ?>" alt="Orchidée">
+        <img class="flower rotation" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/flower.png'; ?>" alt="Fleur">
+        <img class="sunflower rotation" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/sunflower.png'; ?>" alt="Tournesol">
+        <img class="random_flower rotation" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/random_flower.png'; ?>" alt="Fleur diverse">
+        <img class="hibiscus rotation" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/hibiscus_footer.png'; ?>" alt="hibiscus">
         </nav>
 	</header><!-- #masthead -->
